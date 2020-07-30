@@ -8,15 +8,33 @@ public class BasicCharacter : MonoBehaviour {
 
   [SerializeField]
   private bool candleOn = true;
+  [SerializeField]
+  private float candleScareValue = 5.0f;
 
   [SerializeField]
   private float speed = 2f;
+  [SerializeField]
+  private float sprintSpeed = 4f;
+  [SerializeField]
+  private bool isSprinting = false;
+
+  [SerializeField]
+  private float maxFear = 100f;
+
+  [SerializeField]
+  private float maxStamina = 100f;
 
   [SerializeField]
   private float fear = 0.0f;
 
   [SerializeField]
   private float stamina = 100f;
+
+  [SerializeField]
+  private float staminaDrain = 5f;
+
+  [SerializeField]
+  private float fitness = 1f;
 
   [SerializeField]
   private int bravery = 1;
@@ -41,17 +59,17 @@ public class BasicCharacter : MonoBehaviour {
   private Vector3 _movement;
 
   private void Start () {
-    fearBar.SetMaxSliderValue (100, 0);
-    staminaBar.SetMaxSliderValue (100, 100);
+    fearBar.SetMaxSliderValue (maxFear, 0);
+    staminaBar.SetMaxSliderValue (maxStamina, stamina);
   }
 
   private void Update () {
 
     if (!candleOn) {
-      fear += 1 * Time.deltaTime;
-      fearBar.SetSliderValue (fear);
-
-    fearBar.SetPulse (true);
+      var scareValue = (candleScareValue / bravery) * Time.deltaTime;
+      Scare (scareValue);
+    } else {
+      ScareRecovery ();
     }
 
     if (Input.GetKeyDown (KeyCode.C)) {
@@ -61,9 +79,12 @@ public class BasicCharacter : MonoBehaviour {
       } else {
         candleOn = true;
         candleLight.enabled = true;
-        
       }
     }
+
+    if (Input.GetKey (KeyCode.LeftShift)) {
+      Sprint ();
+    } else { RecoverSprint (); }
 
     // Vertical
     float inputY = 0;
@@ -90,7 +111,11 @@ public class BasicCharacter : MonoBehaviour {
   }
 
   private void FixedUpdate () {
-    physicsBody.velocity = _movement * speed;
+    if (isSprinting) {
+      physicsBody.velocity = _movement * sprintSpeed;
+    } else {
+      physicsBody.velocity = _movement * speed;
+    }
   }
 
   private void LateUpdate () {
@@ -100,6 +125,38 @@ public class BasicCharacter : MonoBehaviour {
   public void Scare (float scareValue) {
     fear += scareValue;
     fearBar.SetPulse (true);
+    fearBar.SetSliderValue (fear);
+  }
+
+  public void ScareRecovery () {
+    if (fear > 0) {
+      fear -= candleScareValue * Time.deltaTime;
+      fearBar.SetSliderValue (fear);
+    } else {
+      fearBar.SetPulse (false);
+    }
+  }
+
+  private void Sprint () {
+    isSprinting = true;
+    stamina -= staminaDrain * Time.deltaTime / fitness;
+    staminaBar.SetSliderValue (stamina);
+    staminaBar.SetPulse (true);
+  }
+
+  private void RecoverSprint () {
+    isSprinting = false;
+
+    if (stamina < maxStamina) {
+      stamina += staminaDrain * Time.deltaTime;
+      staminaBar.SetSliderValue (stamina);
+    }
+
+    if (stamina < maxStamina) {
+      staminaBar.SetPulse (true);
+    } else {
+      staminaBar.SetPulse (false);
+    }
   }
 
 }
