@@ -46,10 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BasicCharacter.cs" />
-     <Compile Include="Assets\Scripts\CamManager.cs" />
      <Compile Include="Assets\Scripts\CamZone.cs" />
+     <Compile Include="Assets\Scripts\MazeManager.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-     <Compile Include="Assets\Scripts\ThirdPersonMovement.cs" />
+     <Compile Include="Assets\Scripts\UIBarManager.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
