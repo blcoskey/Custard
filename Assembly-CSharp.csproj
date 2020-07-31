@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BasicCharacter.cs" />
      <Compile Include="Assets\Scripts\CamZone.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\Key.cs" />
      <Compile Include="Assets\Scripts\KeyEnum.cs" />
      <Compile Include="Assets\Scripts\Keyhole.cs" />
