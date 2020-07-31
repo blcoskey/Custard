@@ -38,6 +38,7 @@ public class BasicCharacter : MonoBehaviour {
 
   [SerializeField]
   private int bravery = 1;
+  public KeyType keyType = KeyType.None;
 
   [Header ("Relations")]
   [SerializeField]
@@ -157,6 +158,10 @@ public class BasicCharacter : MonoBehaviour {
     } else {
       staminaBar.SetPulse (false);
     }
+  }
+
+  public void AddKey (KeyType keyType) {
+    this.keyType = keyType;
   }
 
 }

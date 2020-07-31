@@ -47,7 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BasicCharacter.cs" />
      <Compile Include="Assets\Scripts\CamZone.cs" />
+     <Compile Include="Assets\Scripts\Key.cs" />
+     <Compile Include="Assets\Scripts\KeyEnum.cs" />
      <Compile Include="Assets\Scripts\MazeManager.cs" />
+     <Compile Include="Assets\Scripts\PickupDialogue.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Scripts\UIBarManager.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
