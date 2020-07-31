@@ -6,7 +6,12 @@ using UnityEngine.UI;
 public class Key : MonoBehaviour
 {
     [SerializeField]
-    private Text pickupDialogue;
+    private Color INVIS = new Color(255, 255, 255, 0);
+    [SerializeField]
+    private Color WHITE = new Color(255, 255, 255, 255);
+
+    [SerializeField]
+    public Text pickupDialogue;
     [SerializeField]
     private KeyType type;
     [SerializeField]
@@ -15,13 +20,19 @@ public class Key : MonoBehaviour
     private BasicCharacter player;
 
     /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
     /// </summary>
+    void Start()
+    {
+        pickupDialogue = GameObject.Find("PickupDialogue").GetComponent<Text>();
+    }
+
     void Update()
     {
         if(playerInRange && Input.GetKeyDown(KeyCode.Space)){
             player.AddKey(type);
-            pickupDialogue.gameObject.SetActive(false);
+            pickupDialogue.color = INVIS;
             Destroy(gameObject);
         }
     }
@@ -30,7 +41,7 @@ public class Key : MonoBehaviour
     {
         if(other.tag == "Player"){
             player = other.gameObject.GetComponent<BasicCharacter>();
-            pickupDialogue.gameObject.SetActive(true);
+            pickupDialogue.color = WHITE;
 
             if(player.keyType == KeyType.None){
                 pickupDialogue.text = "Press SPACE to pickup key";
@@ -44,7 +55,7 @@ public class Key : MonoBehaviour
     private void OnTriggerExit(Collider other) {
         if(other.tag == "Player"){
             playerInRange = false;
-            pickupDialogue.gameObject.SetActive(false);
+            pickupDialogue.color = INVIS;
         }
     }
 }

@@ -83,7 +83,7 @@ public class BasicCharacter : MonoBehaviour {
       }
     }
 
-    if (Input.GetKey (KeyCode.LeftShift)) {
+    if (Input.GetKey (KeyCode.LeftShift) && stamina > 0) {
       Sprint ();
     } else { RecoverSprint (); }
 
@@ -117,10 +117,6 @@ public class BasicCharacter : MonoBehaviour {
     } else {
       physicsBody.velocity = _movement * speed;
     }
-  }
-
-  private void LateUpdate () {
-    // transform.LookAt(Camera.main.transform.position);
   }
 
   public void Scare (float scareValue) {
@@ -162,6 +158,18 @@ public class BasicCharacter : MonoBehaviour {
 
   public void AddKey (KeyType keyType) {
     this.keyType = keyType;
+  }
+
+  public void UseKey () {
+    this.keyType = KeyType.None;
+  }
+
+  /// <summary>
+  /// LateUpdate is called every frame, if the Behaviour is enabled.
+  /// It is called after all Update functions have been called.
+  /// </summary>
+  void LateUpdate () {
+    spriteRenderer.transform.LookAt (Camera.main.transform.position);
   }
 
 }

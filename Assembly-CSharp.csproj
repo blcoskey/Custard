@@ -49,6 +49,8 @@
      <Compile Include="Assets\Scripts\CamZone.cs" />
      <Compile Include="Assets\Scripts\Key.cs" />
      <Compile Include="Assets\Scripts\KeyEnum.cs" />
+     <Compile Include="Assets\Scripts\Keyhole.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\MazeManager.cs" />
      <Compile Include="Assets\Scripts\PickupDialogue.cs" />
      <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
