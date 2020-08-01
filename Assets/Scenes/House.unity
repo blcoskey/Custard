@@ -12465,7 +12465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924646265}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 15, y: 8.395569, z: 13.49385}
+  m_LocalPosition: {x: 15, y: 18.140577, z: 7.1026816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -20484,7 +20484,7 @@ PrefabInstance:
     - target: {fileID: 8989224131344463371, guid: 571a45515f3d34aa1b1ac434747d4f3d,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.8000001
+      value: 1.9945698
       objectReference: {fileID: 0}
     - target: {fileID: 8989224131344463371, guid: 571a45515f3d34aa1b1ac434747d4f3d,
         type: 3}
@@ -20494,7 +20494,7 @@ PrefabInstance:
     - target: {fileID: 8989224131344463371, guid: 571a45515f3d34aa1b1ac434747d4f3d,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.8000001
+      value: 1.451602
       objectReference: {fileID: 0}
     - target: {fileID: 8989224131344463371, guid: 571a45515f3d34aa1b1ac434747d4f3d,
         type: 3}
@@ -26582,12 +26582,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 4
   mazeManager: {fileID: 0}
-  Player: {fileID: 1586357678}
+  player: {fileID: 1586357678}
   mobDistanceRun: 4
   animator: {fileID: 2019641908}
   walkSpeed: 5
   runSpeed: 10
-  lineOfSight: 20
+  fieldOfViewAngle: 110
+  senseCollider: {fileID: 0}
+  playerInSight: 0
   lastMaze: 0
   currentPatrolPath: []
   patrolPoints:
@@ -26629,6 +26631,19 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1548870873}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &2019641910
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019641905}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.05
+  m_Center: {x: 0, y: 0.86, z: 0}
 --- !u!43 &2026731659
 Mesh:
   m_ObjectHideFlags: 0
