@@ -42,6 +42,7 @@ public class MazeManager : MonoBehaviour
             default: newPosition.y = MAZE_3_Y; break;
         }
 
+        currentMaze = mazeNumber;
         mazeTransform.position = newPosition;
     }
 }
