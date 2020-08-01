@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: 59ae734b6b4cd134795efeb8b3b63980
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -194257899504523790
+    second: CandleIdle_0
+  - first:
+      213: -4869955814183860178
+    second: CandleIdle_1
+  - first:
+      213: 7441824366491962500
+    second: CandleIdle_2
+  - first:
+      213: 5595827966243558037
+    second: CandleIdle_3
+  - first:
+      213: -5961027076595411447
+    second: CandleIdle_4
+  - first:
+      213: -3959782328900821074
+    second: CandleIdle_5
+  - first:
+      213: -4513439443943453086
+    second: CandleIdle_6
+  - first:
+      213: 2797792605928907885
+    second: CandleIdle_7
+  - first:
+      213: 3845660732152735067
+    second: CandleIdle_8
+  - first:
+      213: -3160611292840417842
+    second: CandleIdle_9
+  - first:
+      213: 5965068096228983664
+    second: CandleIdle_10
+  - first:
+      213: -2079455494837831293
+    second: CandleIdle_11
+  - first:
+      213: -825481281370322008
+    second: CandleIdle_12
+  - first:
+      213: 1418665306042617184
+    second: CandleIdle_13
+  - first:
+      213: 979404031035194690
+    second: CandleIdle_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CandleIdle_0
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 6546
+        width: 1138
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f52839387bdd4df0800000000000000
+      internalID: -194257899504523790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_1
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 6546
+        width: 1191
+        height: 2028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2809b73df07a6cb0800000000000000
+      internalID: -4869955814183860178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_2
+      rect:
+        serializedVersion: 2
+        x: 4815
+        y: 6546
+        width: 1208
+        height: 2010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c899535dba64760800000000000000
+      internalID: 7441824366491962500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_3
+      rect:
+        serializedVersion: 2
+        x: 6982
+        y: 6546
+        width: 1190
+        height: 2033
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592d42823ef58ad40800000000000000
+      internalID: 5595827966243558037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_4
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 4386
+        width: 1129
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9069b0be47d264da0800000000000000
+      internalID: -5961027076595411447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_5
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 4386
+        width: 1133
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf5ff1a3f60c09c0800000000000000
+      internalID: -3959782328900821074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_6
+      rect:
+        serializedVersion: 2
+        x: 4822
+        y: 4382
+        width: 1195
+        height: 2037
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e838c2dba0d51c0800000000000000
+      internalID: -4513439443943453086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_7
+      rect:
+        serializedVersion: 2
+        x: 6974
+        y: 4386
+        width: 1211
+        height: 2011
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d646b9f3d81c3d620800000000000000
+      internalID: 2797792605928907885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_8
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 2226
+        width: 1196
+        height: 2023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55e1aa8f088e5530800000000000000
+      internalID: 3845660732152735067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_9
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 2226
+        width: 1135
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5a82956c04324d0800000000000000
+      internalID: -3160611292840417842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_10
+      rect:
+        serializedVersion: 2
+        x: 4858
+        y: 2226
+        width: 1138
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0738eb844dd28c250800000000000000
+      internalID: 5965068096228983664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_11
+      rect:
+        serializedVersion: 2
+        x: 6982
+        y: 2223
+        width: 1191
+        height: 2028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389f4ffae3a4423e0800000000000000
+      internalID: -2079455494837831293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_12
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 63
+        width: 1208
+        height: 2010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab003fe52d4b84f0800000000000000
+      internalID: -825481281370322008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_13
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 63
+        width: 1190
+        height: 2033
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d47d5549c10b310800000000000000
+      internalID: 1418665306042617184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdle_14
+      rect:
+        serializedVersion: 2
+        x: 4858
+        y: 63
+        width: 1129
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d3071f6ca879d00800000000000000
+      internalID: 979404031035194690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bb61ed0bdba5d9e46b39d825b5dffbb4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

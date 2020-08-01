@@ -67,7 +67,7 @@ public class BasicCharacter : MonoBehaviour {
   private void Update () {
 
     if (!candleOn) {
-      var scareValue = (candleScareValue / bravery) * Time.deltaTime;
+      var scareValue = candleScareValue;
       Scare (scareValue);
     } else {
       ScareRecovery ();
@@ -119,9 +119,15 @@ public class BasicCharacter : MonoBehaviour {
     }
   }
 
-  public void Scare (float scareValue) {
-    fear += scareValue;
-    fearBar.SetPulse (true);
+  public void Scare (float scareValue, bool chasing = false) {
+    fear += (scareValue / bravery) * Time.deltaTime;
+    if (chasing) {
+      fearBar.SetIntensePulse (true);
+      fearBar.SetPulse (false);
+    } else {
+      fearBar.SetPulse (true);
+      fearBar.SetIntensePulse (false);
+    }
     fearBar.SetSliderValue (fear);
   }
 
@@ -131,6 +137,7 @@ public class BasicCharacter : MonoBehaviour {
       fearBar.SetSliderValue (fear);
     } else {
       fearBar.SetPulse (false);
+      fearBar.SetIntensePulse (false);
     }
   }
 
@@ -170,6 +177,14 @@ public class BasicCharacter : MonoBehaviour {
   /// </summary>
   void LateUpdate () {
     spriteRenderer.transform.LookAt (Camera.main.transform.position);
+  }
+
+  public bool PlayerIsDead () {
+    if (fear >= maxFear)
+      return true;
+
+    return false;
+
   }
 
 }

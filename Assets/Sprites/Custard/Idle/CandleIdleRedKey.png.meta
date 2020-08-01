@@ -1,0 +1,500 @@
+fileFormatVersion: 2
+guid: 28fa3719f71eb514c90af6ab13cbe4cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -677452636751847207
+    second: CandleIdleRedKey_0
+  - first:
+      213: 3343731203293912753
+    second: CandleIdleRedKey_1
+  - first:
+      213: 8020524291855718248
+    second: CandleIdleRedKey_2
+  - first:
+      213: 5331908652615606915
+    second: CandleIdleRedKey_3
+  - first:
+      213: 6656145665492332684
+    second: CandleIdleRedKey_4
+  - first:
+      213: -8777346798490158868
+    second: CandleIdleRedKey_5
+  - first:
+      213: -675137551562183612
+    second: CandleIdleRedKey_6
+  - first:
+      213: -7030130836332393914
+    second: CandleIdleRedKey_7
+  - first:
+      213: 5974470070212005239
+    second: CandleIdleRedKey_8
+  - first:
+      213: -8448738158589803588
+    second: CandleIdleRedKey_9
+  - first:
+      213: -3690514928131061650
+    second: CandleIdleRedKey_10
+  - first:
+      213: 7349087314697097891
+    second: CandleIdleRedKey_11
+  - first:
+      213: -4513004760066939587
+    second: CandleIdleRedKey_12
+  - first:
+      213: 4840069912658373941
+    second: CandleIdleRedKey_13
+  - first:
+      213: -3421508379903862748
+    second: CandleIdleRedKey_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CandleIdleRedKey_0
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 6546
+        width: 1339
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0214a8a643996f0800000000000000
+      internalID: -677452636751847207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_1
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 6546
+        width: 1368
+        height: 2028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be19b440d1576e20800000000000000
+      internalID: 3343731203293912753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_2
+      rect:
+        serializedVersion: 2
+        x: 4626
+        y: 6546
+        width: 1397
+        height: 2010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86793705950ae4f60800000000000000
+      internalID: 8020524291855718248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_3
+      rect:
+        serializedVersion: 2
+        x: 6795
+        y: 6546
+        width: 1377
+        height: 2033
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3822cfd7baebef940800000000000000
+      internalID: 5331908652615606915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_4
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 4386
+        width: 1318
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c803dec87316f5c50800000000000000
+      internalID: 6656145665492332684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_5
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 4386
+        width: 1328
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8f4955799903680800000000000000
+      internalID: -8777346798490158868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_6
+      rect:
+        serializedVersion: 2
+        x: 4638
+        y: 4382
+        width: 1379
+        height: 2037
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ceb9059fd61a6f0800000000000000
+      internalID: -675137551562183612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_7
+      rect:
+        serializedVersion: 2
+        x: 6796
+        y: 4386
+        width: 1389
+        height: 2011
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a43e76045ff6e90800000000000000
+      internalID: -7030130836332393914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_8
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 2226
+        width: 1379
+        height: 2023
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d8030ffd499e250800000000000000
+      internalID: 5974470070212005239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_9
+      rect:
+        serializedVersion: 2
+        x: 2503
+        y: 2226
+        width: 1329
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb387f8786d00ca80800000000000000
+      internalID: -8448738158589803588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_10
+      rect:
+        serializedVersion: 2
+        x: 4657
+        y: 2226
+        width: 1339
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68c87ed938a8ccc0800000000000000
+      internalID: -3690514928131061650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_11
+      rect:
+        serializedVersion: 2
+        x: 6805
+        y: 2226
+        width: 1368
+        height: 2028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a299dfb9f33df560800000000000000
+      internalID: 7349087314697097891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_12
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 66
+        width: 1397
+        height: 2010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d352096e4169e51c0800000000000000
+      internalID: -4513004760066939587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_13
+      rect:
+        serializedVersion: 2
+        x: 2475
+        y: 66
+        width: 1377
+        height: 2033
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53dee0811f16b2340800000000000000
+      internalID: 4840069912658373941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CandleIdleRedKey_14
+      rect:
+        serializedVersion: 2
+        x: 4669
+        y: 66
+        width: 1318
+        height: 2055
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428dec3a14c5480d0800000000000000
+      internalID: -3421508379903862748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 210bb90c5a74dab4fa1978fca354052f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

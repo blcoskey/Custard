@@ -11,13 +11,15 @@ public class HuntTarget {
 
 public class Enemy : MonoBehaviour {
     [SerializeField]
+    private bool isHunting = false;
+    [SerializeField]
     private EnemyState currentState = EnemyState.Patrol;
     private NavMeshAgent mob;
 
     [Header ("Relations")]
     [SerializeField]
     private MazeManager mazeManager;
-    public GameObject player;
+    public BasicCharacter player;
     public float mobDistanceRun = 4.0f;
 
     [SerializeField]
@@ -25,9 +27,15 @@ public class Enemy : MonoBehaviour {
 
     [Header ("Stats")]
     [SerializeField]
+    private float chaseScareFactor = 10.0f;
+    [SerializeField]
+    private float huntScareFactor = 3.0f;
+    [SerializeField]
     private float walkSpeed = 5.0f;
     [SerializeField]
     private float runSpeed = 10.0f;
+    [SerializeField]
+    private float huntTime = 10.0f;
 
     [Header ("Navigation")]
     [SerializeField]
@@ -57,16 +65,47 @@ public class Enemy : MonoBehaviour {
         mob.speed = walkSpeed;
         animator.SetBool ("Patrol", true);
         lastMaze = mazeManager.currentMaze;
+
+        player = GameObject.FindWithTag("Player").GetComponent<BasicCharacter>();
+
+        SetAllPaths();
+
         currentPatrolPath = GetPatrolPath ();
         senseCollider = GetComponent<SphereCollider> ();
 
         GotoNextPoint ();
     }
 
+    public void SetAllPaths(){
+        Transform mainHall = GameObject.Find("EnemyPatrolPoints/MainHall").GetComponent<Transform>();
+
+        Transform bedroom1 = GameObject.Find("EnemyPatrolPoints/Bedroom1").GetComponent<Transform>();
+        Transform bedroom2 = GameObject.Find("EnemyPatrolPoints/Bedroom2").GetComponent<Transform>();
+        Transform bedroom3 = GameObject.Find("EnemyPatrolPoints/Bedroom3").GetComponent<Transform>();
+
+        patrolPoints = new List<Transform>();
+        patrolPoints.Add(mainHall);
+        patrolPoints.Add(bedroom1);
+        patrolPoints.Add(bedroom2);
+        patrolPoints.Add(bedroom3);
+
+        Transform maze1 = GameObject.Find("EnemyPatrolPoints/Maze1").GetComponent<Transform>();
+        maze1PatrolPoints = new List<Transform>();
+        maze1PatrolPoints.Add(maze1);
+
+        Transform maze2 = GameObject.Find("EnemyPatrolPoints/Maze2").GetComponent<Transform>();
+        maze2PatrolPoints = new List<Transform>();
+        maze2PatrolPoints.Add(maze1);
+
+        Transform maze3 = GameObject.Find("EnemyPatrolPoints/Maze3").GetComponent<Transform>();
+        maze3PatrolPoints = new List<Transform>();
+        maze3PatrolPoints.Add(maze1);
+    }
+
     void Update () {
         switch (currentState) {
             case EnemyState.Hunt:
-                PatrolUpdate ();
+                Hunt ();
                 break;
             case EnemyState.Patrol: 
                 PatrolUpdate ();
@@ -79,7 +118,7 @@ public class Enemy : MonoBehaviour {
     }
 
     void OnTriggerStay (Collider other) {
-        if (other.gameObject == player) {
+        if (other.gameObject.tag == "Player") {
             playerInSight = false;
             Vector3 playerDirection = other.transform.position - transform.position;
             float angle = Vector3.Angle (playerDirection, transform.forward);
@@ -98,6 +137,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void Chase () {
+        player.Scare(chaseScareFactor);
         float distance = Vector3.Distance (transform.position, player.transform.position);
 
         if (distance < mobDistanceRun) {
@@ -111,10 +151,6 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    private void Hunt () {
-
-    }
-
     private List<Transform> GetHuntPath(){
         List<HuntTarget> huntLocations = new List<HuntTarget> ();
 
@@ -126,7 +162,7 @@ public class Enemy : MonoBehaviour {
         return huntLocations.OrderBy(x => x.distance).Select(x => x.transform).ToList();
     }
 
-    private void ChangeState (EnemyState prevState, EnemyState newState) {
+    public void ChangeState (EnemyState prevState, EnemyState newState) {
 
         switch (prevState) {
             case EnemyState.Patrol:
@@ -134,6 +170,10 @@ public class Enemy : MonoBehaviour {
                 break;
             case EnemyState.Chase:
                 animator.SetBool ("Chase", false);
+                break;
+            case EnemyState.Hunt:
+                animator.SetBool ("Chase", false);
+                isHunting = false;
                 break;
 
         }
@@ -155,6 +195,21 @@ public class Enemy : MonoBehaviour {
         }
 
         currentState = newState;
+    }
+
+    private void Hunt () {
+        player.Scare(huntScareFactor);
+        if(!isHunting){
+            Invoke("EndHunt", huntTime);
+            isHunting = true;
+        }
+
+        PatrolUpdate();
+    }
+
+    private void EndHunt(){
+        if(isHunting)
+            ChangeState(currentState, EnemyState.Patrol);
     }
 
     private void PatrolUpdate () {
