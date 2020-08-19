@@ -37,6 +37,24 @@ AnimationClip:
     - time: 0.25
       value: {fileID: -3756793442529348895, guid: 7d859b676ebf64f4e887dcfe046821c2,
         type: 3}
+    - time: 0.33333334
+      value: {fileID: 3236548801948021710, guid: 7d859b676ebf64f4e887dcfe046821c2,
+        type: 3}
+    - time: 0.38333333
+      value: {fileID: -4628845703746980057, guid: 7d859b676ebf64f4e887dcfe046821c2,
+        type: 3}
+    - time: 0.43333334
+      value: {fileID: 3646756589328013138, guid: 7d859b676ebf64f4e887dcfe046821c2,
+        type: 3}
+    - time: 0.48333332
+      value: {fileID: 7739289821553761875, guid: 7d859b676ebf64f4e887dcfe046821c2,
+        type: 3}
+    - time: 0.53333336
+      value: {fileID: 6186829422462347853, guid: 7d859b676ebf64f4e887dcfe046821c2,
+        type: 3}
+    - time: 0.5833333
+      value: {fileID: -3756793442529348895, guid: 7d859b676ebf64f4e887dcfe046821c2,
+        type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -62,12 +80,18 @@ AnimationClip:
     - {fileID: 7739289821553761875, guid: 7d859b676ebf64f4e887dcfe046821c2, type: 3}
     - {fileID: 6186829422462347853, guid: 7d859b676ebf64f4e887dcfe046821c2, type: 3}
     - {fileID: -3756793442529348895, guid: 7d859b676ebf64f4e887dcfe046821c2, type: 3}
+    - {fileID: 3236548801948021710, guid: 7d859b676ebf64f4e887dcfe046821c2, type: 3}
+    - {fileID: -4628845703746980057, guid: 7d859b676ebf64f4e887dcfe046821c2, type: 3}
+    - {fileID: 3646756589328013138, guid: 7d859b676ebf64f4e887dcfe046821c2, type: 3}
+    - {fileID: 7739289821553761875, guid: 7d859b676ebf64f4e887dcfe046821c2, type: 3}
+    - {fileID: 6186829422462347853, guid: 7d859b676ebf64f4e887dcfe046821c2, type: 3}
+    - {fileID: -3756793442529348895, guid: 7d859b676ebf64f4e887dcfe046821c2, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.26666668
+    m_StopTime: 0.59999996
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -86,4 +110,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: Step
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

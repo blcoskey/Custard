@@ -13,10 +13,10 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     private bool isHunting = false;
     [SerializeField]
-    private EnemyState currentState = EnemyState.Patrol;
+    public EnemyState currentState = EnemyState.Patrol;
     private NavMeshAgent mob;
 
-    [Header ("Relations")]
+    [Header("Relations")]
     [SerializeField]
     private MazeManager mazeManager;
     public BasicCharacter player;

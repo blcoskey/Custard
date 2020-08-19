@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
     [SerializeField]
@@ -20,6 +20,10 @@ public class LevelManager : MonoBehaviour {
     private MazeManager mazeManager;
     [SerializeField]
     private Text pickupDialogue;
+    [SerializeField]
+    private Enemy enemyScript;
+    [SerializeField]
+    private bool gamePaused;
 
     [Header ("Prefabs")]
     [SerializeField]
@@ -41,19 +45,65 @@ public class LevelManager : MonoBehaviour {
     [SerializeField]
     private Transform keyspawnLevel3;
 
-    [Header("Relations")]
+    [Header ("Relations")]
     [SerializeField]
     private BasicCharacter player;
+    [SerializeField]
+    private AudioSource ambienceSource;
+    [SerializeField]
+    private AudioSource chaseSource;
+    [SerializeField]
+    private GameObject pauseObject;
 
-    void Start()
-    {
-        player = GameObject.FindWithTag("Player").GetComponent<BasicCharacter>();
+    void Start () {
+        player = GameObject.FindWithTag ("Player").GetComponent<BasicCharacter> ();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
-    {
-        if(player.PlayerIsDead()){
-            GameOver();
+    void PauseGame () {
+        gamePaused = true;
+        Time.timeScale = 0;
+        pauseObject.SetActive (true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    void ResumeGame () {
+        gamePaused = false;
+        Time.timeScale = 1;
+        pauseObject.SetActive (false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void Update () {
+        if (Input.GetKeyDown (KeyCode.Escape)) {
+            if (gamePaused) {
+                ResumeGame ();
+            } else {
+                PauseGame ();
+            }
+        }
+        if (redKey && greenKey && blueKey) {
+            Win ();
+        }
+        if (player.PlayerIsDead ()) {
+            GameOver ();
+        }
+
+        if (enemyScript == null) {
+            var newEnemy = GameObject.FindWithTag ("Enemy");
+            if (newEnemy != null) {
+                enemyScript = newEnemy.GetComponent<Enemy> ();
+            }
+        } else {
+            if (enemyScript.currentState == EnemyState.Chase && !chaseSource.isPlaying) {
+                PlayChaseMusic ();
+            }
+            if (enemyScript.currentState == EnemyState.Patrol && !ambienceSource.isPlaying) {
+                PlayAmbienceMusic ();
+            }
         }
     }
 
@@ -87,7 +137,7 @@ public class LevelManager : MonoBehaviour {
         mazeManager.SwitchMaze (nextLevel);
         mazeLevelsUsed.Add (nextLevel);
 
-        SpawnEnemy(nextLevel);
+        SpawnEnemy (nextLevel);
     }
 
     private void SpawnKey (int level) {
@@ -117,19 +167,28 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
-    private void GameOver(){
-        Debug.Log("GameOver");
-        RestartGame();
+    public void Quit () {
+        SceneManager.LoadScene ("MainMenu");
     }
 
-    private void RestartGame(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    private void GameOver () {
+        SceneManager.LoadScene ("GameOver");
     }
 
-    private void SpawnEnemy(int level){
-        GameObject oldEnemy = GameObject.FindWithTag("Enemy");
-        if(oldEnemy != null){
-            Destroy(oldEnemy);
+    private void Win () {
+        SceneManager.LoadScene ("WinScreen");
+    }
+
+    private void RestartGame () {
+        SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void SpawnEnemy (int level) {
+        GameObject oldEnemy = GameObject.FindWithTag ("Enemy");
+        if (oldEnemy != null) {
+            Destroy (oldEnemy);
         }
 
         Vector3 spawnPoint = new Vector3 ();
@@ -142,6 +201,15 @@ public class LevelManager : MonoBehaviour {
         }
 
         Instantiate (enemy, spawnPoint, Quaternion.identity);
+    }
+
+    public void PlayChaseMusic () {
+        chaseSource.Play ();
+        ambienceSource.Stop ();
+    }
+    public void PlayAmbienceMusic () {
+        ambienceSource.Play ();
+        chaseSource.Stop ();
     }
 
 }
